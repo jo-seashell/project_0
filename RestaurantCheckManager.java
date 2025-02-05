@@ -11,22 +11,7 @@ public class RestaurantCheckManager {
         double answer = 0;
         double testDigits = 0;
         while (true) {
-            System.out.print(message);
-            try {
-                answer = scnr.nextDouble();
-                
-                //Error if the user enters 3+ decimal places
-                testDigits = Math.round(answer * 100.0) / 100.0;
-                if (Double.compare(answer, testDigits) != 0.0) {
-                    throw new Exception("Please enter a number with two or less decimal places");
-                }
-
-                //Error if the user enters a negative value
-                else if (answer < 0) {
-                    throw new Exception("Please enter a positive number");
-                }
-                break;
-            }
+            
 
             //Error if the user enters something weird instead of a number
             catch (InputMismatchException e) {
